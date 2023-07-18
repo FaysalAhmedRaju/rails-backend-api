@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      get 'articles/index'
-      get 'articles/show'
-      get 'articles/create'
-      get 'articles/update'
-      get 'articles/delete'
+    	resources :articles, only: [:index, :show, :create, :update, :delete]
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
